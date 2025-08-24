@@ -1,6 +1,8 @@
 function insert_Row() { 
-  let newrow=document.createElement("tr");
-   newrow.innerHTML=`<td>New Cell1</td><td>New Cell2</td>`;
    let table=document.getElementById("sampleTable");
-  table.insertBefore(newrow, table.firstChild);
+   let newRow = table.insertRow(0);
+   let cell1 = newRow.insertCell(0);
+   cell1.textContent = "New Cell1";
+  let cell2 = newRow.insertCell(1);
+  cell2.textContent = "New Cell2";
 }
